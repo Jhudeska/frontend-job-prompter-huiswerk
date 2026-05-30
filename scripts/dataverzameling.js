@@ -1,5 +1,5 @@
-export const data = [
-    "HR",
-    "Marketing",
-    "IT"
-];
+// export const data = [
+//     "HR",
+//     "Marketing",
+//     "IT"
+// ];
