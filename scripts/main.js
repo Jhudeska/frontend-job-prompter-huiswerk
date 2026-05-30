@@ -73,4 +73,21 @@ const departments = {
     }
 }
 
-console.log(departments);
+// console.log(departments);
+
+//Opdracht 1A
+console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers");
+
+//Opdracht 1B
+console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description);
+
+//Opdracht 1C
+console.log("De afdeling Customer Service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers");
+
+//Opdracht 1D
+console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + departments.sales.description );
+
+
+
+
+//Opdracht 2 - Prompten en beslissen
