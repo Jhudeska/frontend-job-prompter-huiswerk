@@ -92,57 +92,74 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "
 
 //Opdracht 2 - Prompten en beslissen
 //Opdracht 2A
-// const userInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
-// console.log(userInput);
+const userInput = prompt("Over welke afdeling wil je meer informatie? Kies uit: [marketing / sales / customer-service]");
+console.log(userInput);
 
-//Opdracht 2B
-//  switch (userInput){
-//      case "marketing":
-//          console.log("Je koos " + userInput + ". " + departments.marketing.description);
-//          break;
-//      case "sales":
-//          console.log("Je koos " + userInput + ". " + departments.sales.description);
-//          break;
-//      case "customer-service":
-//          console.log("Je koos " + userInput + ". " + departments["customer-service"].description);
-//          break;
-//      default:
-//          //opdracht 2C
-//          console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
-//          break;
-//  }
+//Opdracht 2B"
 
 
 //Opdracht3A
-const jobTitle  = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n"
-    + departments.marketing.jobs[0].title + ", 0: \n"
-    + departments.marketing.jobs[1].title + ", 1: \n"
-    + departments.marketing.jobs[2].title + ", 2: \n"
-    + departments.marketing.jobs[3].title + ", 3: \n"
+// const jobTitle  = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. \n"
+//     + departments.marketing.jobs[0].title + ", 0: \n"
+//     + departments.marketing.jobs[1].title + ", 1: \n"
+//     + departments.marketing.jobs[2].title + ", 2: \n"
+//     + departments.marketing.jobs[3].title + ", 3: \n"
+// );
+//
+//
+// //Opdracht3B
+//
+// switch (jobTitle) {
+//     case "0":
+//         console.log("Je koos " + departments.marketing.jobs[0].title + ". Een uitdagende rol! " + departments.marketing.jobs[0].description);
+//         break;
+//     case "1":
+//         console.log('Je koos ' + departments.marketing.jobs[1].title + ". Een uitdagende rol! " + departments.marketing.jobs[1].description);
+//         break;
+//     case "2":
+//         console.log("Je koos " + departments.marketing.jobs[2].title + ". Een uitdagende rol! " + departments.marketing.jobs[2].description);
+//         break;
+//     case "3":
+//         console.log("Je koos " + departments.marketing.jobs[3].title + ". Een uitdagende rol! " + departments.marketing.jobs[3].description);
+//         break;
+//     default:
+//         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+// }
+
+//Opdracht3C
+//Getest werkt naar behoren
+
+// Opdracht4A
+console.log(userInput + " is een leuke afdeling om te werken. Er werken op dit moment " + departments[userInput].numberOfEmployees + " medewerkers.");
+
+//Opdracht4B
+const jobTitle = prompt("Je koos "
+    + userInput
+    + ". "
+    + "Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in. 0: "
+    + departments[userInput].jobs[0].title + ", 0: \n"
+    + departments[userInput].jobs[1].title + ", 1: \n"
+    + departments[userInput].jobs[2].title + ", 2: \n"
+    + departments[userInput].jobs[3].title + ", 3: \n"
 );
 
+console.log(jobTitle);
 
-//Opdracht3B
-
+//Opdracht4C
 switch (jobTitle) {
     case "0":
-        console.log("Je koos " + departments.marketing.jobs[0].title + ". Een uitdagende rol! " + departments.marketing.jobs[0].description);
+        console.log("Je koos " + departments[userInput].jobs[0].title + ". Een uitdagende rol! " + departments[userInput].jobs[0].description);
         break;
     case "1":
-        console.log('Je koos ' + departments.marketing.jobs[1].title + ". Een uitdagende rol! " + departments.marketing.jobs[1].description);
+        console.log("Je koos " + departments[userInput].jobs[1].title + ". Een uitdagende rol! " + departments[userInput].jobs[1].description);
         break;
     case "2":
-        console.log("Je koos " + departments.marketing.jobs[2].title + ". Een uitdagende rol! " + departments.marketing.jobs[2].description);
+        console.log("Je koos " + departments[userInput].jobs[2].title + ". Een uitdagende rol! " + departments[userInput].jobs[2].description);
         break;
     case "3":
-        console.log("Je koos " + departments.marketing.jobs[3].title + ". Een uitdagende rol! " + departments.marketing.jobs[3].description);
+        console.log("Je koos " + departments[userInput].jobs[3].title + ". Een uitdagende rol! " + departments[userInput].jobs[3].description);
         break;
     default:
         console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
 
-//Opdracht3C
-//Getest werkt naar behoren
-
-
-// pull request: https://github.com/Jhudeska/frontend-job-prompter-huiswerk/pull/1
